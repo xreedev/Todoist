@@ -45,3 +45,7 @@ li{
     opacity: 50%;
     text-decoration: line-through;
 }
+.done-button{
+    margin-left: 10px;
+    width: 25px;
+}

@@ -1,6 +1,6 @@
 taskCount=0;
 function addTask(){
-    const input=document.getElementById("task");
+    const input=document.getElementById("input-task-name");
     const inputTask=input.value;
     if(inputTask.trim()=="")
     {

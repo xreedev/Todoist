@@ -14,6 +14,7 @@ function createTask(inputTasc){
     doneButton.textContent="✅";
     doneButton.classList.add("done-button");
     doneButton.addEventListener("click",function(){markAsDone(this.id)});
+    newItem.addEventListener("click",function(){markAsDone(this.id)});
     newItem.id="task-"+taskCount;
     doneButton.id=taskCount;
     newItem.appendChild(doneButton);
@@ -21,23 +22,23 @@ function createTask(inputTasc){
 }
 
 function markAsDone(id){
-   let button=document.getElementById(id);
-   button.addEventListener("click",function(){
+   let doneItem=document.getElementById(id);
+   doneItem.addEventListener("click",function(){
     markAsNotDone(id);
    });
-   button.textContent="🔃";
-   let doneItem=document.getElementById("task-"+id);
    doneItem.classList.remove("todo-task");
    doneItem.classList.add("completed-task");
 }
 
 function markAsNotDone(id){
-    let button=document.getElementById(id);
-    button.addEventListener("click",function(){
+    let doneItem=document.getElementById(id);
+    doneItem.addEventListener("click",function(){
         markAsDone(this.id)
     });
-    button.textContent="✅";
-    let doneItem=document.getElementById("task-"+id);
     doneItem.classList.remove("completed-task");
     doneItem.classList.add("todo-task");
+ }
+
+ function deleteItem(id){
+    document,getElementById(id).remove();
  }

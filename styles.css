@@ -13,7 +13,7 @@ html,body{
     height: 100vh;
     margin: 0;
     padding: 0;
-    color:var(--new-whites) ;
+    color:var(--new-white) ;
 }
 .container{
     width: 100%;

@@ -1,18 +1,27 @@
 :root {
-    --new-blue: #14213D;
-    --light-blue: #FCA311;
-    --new-white:#FFFFFF;
+    --new-blue: #252422;
+    --light-orange: #EB5E28;
+    --new-white:#FFFCF2;
+    --light-brown:#CCC5B9;
   }
 *{
     margin: 0;
     padding: 0; 
 }
+.task{
+    background-color: var(--light-brown);;
+    color: var(--new-blue);
+    font-weight: bolder;
+    height: 20px;
+}
 html,body{
+    font-weight: bolder;
     background-color: var(--new-blue);
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
+    font-family: monospace;
     color:var(--new-white) ;
 }
 .container{
@@ -23,12 +32,12 @@ html,body{
 .header{
     width: 100%;
     height: 10%;
-    background-color: var(--light-blue);
+    background-color: var(--light-orange);
     color: var(--new-blue);
     padding-top: 2%;
 }
 .input-task{
-    border: 2px solid var(--light-blue);
+    border: 2px solid var(--light-orange);
     margin-top: 20px;
     margin:15px auto;
     text-align: center;
@@ -36,29 +45,41 @@ html,body{
     padding: 15px;
 }
 .pending-tasks{
-    border: 2px solid var(--light-blue);
+    border: 2px solid var(--light-orange);
     border-radius: 5px;
     width: 50%;
     display: inline-block;
+    margin-right: 5px;
 }
 .tasks-list{
     list-style-type: disc;
 }
-li{
-    display: list-item;
+li{      
+    word-wrap: break-word;
 }
 .todo-task{
     margin: 5px;
-    border: 1px solid var(--light-blue);
+    border: 1px solid var(--light-orange);
     padding: 2px;
-    color: green;
+    color: var(--light-blue);
     border-radius: 5px;
+    text-align: left;
 }
 .completed-task{
     opacity: 50%;
+    word-wrap: break-word;
     text-decoration: line-through;
+    border-radius: 5px;
+    text-align: left;
 }
 .done-button{
     margin-left: 10px;
     width: 25px;
+}
+.task-main{
+    margin-top: 25px;
+    border: 1px solid var(--new-white);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
 }

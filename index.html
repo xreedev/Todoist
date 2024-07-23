@@ -11,20 +11,21 @@
     <div class="header">
         <h1>TO DO LIST</h1>
     </div>     
+    <div class="task-main">
     <div class="input-task">
       <label for="task">ENTER TASK</label>
-      <input name="task" type="text" id="task" />
+      <input name="task"  class="task" type="text" id="task" placeholder="Enter a task"/>
       <button type="submit" onclick="addTask() ">Submit</button>
     </div>
     <br>
     <div class="pending-tasks">
         <h3>TASKS</h3>
-        <ul id="tasks-list">
-        <!-- <li><div class="todo-task">to do task</div></li>
-        <li><div class="completed-task">completed task</div></li> -->
-        </ul>
+        <ol id="tasks-list">
+          <!-- Tasks will be injected here -->
+        </ol>
     </div>
     </div>
+  </div>
     <script src="script.js"></script>
   </body>
 </html>

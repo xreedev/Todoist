@@ -9,7 +9,7 @@ function createTask(inputTasc){
     let taskList=document.getElementById("tasks-list");
     let newItem=document.createElement("li")
     let doneButton=document.createElement("button");
-    newItem.textContent=inputTasc;
+    newItem.textContent=taskCount+"."+inputTasc;
     newItem.classList.add("todo-task");
     doneButton.textContent="✅";
     doneButton.classList.add("done-button");
@@ -21,18 +21,22 @@ function createTask(inputTasc){
 }
 
 function markAsDone(id){
-   this.addEventListener("click",function(){
-    markAsNotDone(this.id)
+   let button=document.getElementById(id);
+   button.addEventListener("click",function(){
+    markAsNotDone(id);
    });
+   button.textContent="🔃";
    let doneItem=document.getElementById("task-"+id);
    doneItem.classList.remove("todo-task");
    doneItem.classList.add("completed-task");
 }
 
 function markAsNotDone(id){
-    this.addEventListener("click",function(){
+    let button=document.getElementById(id);
+    button.addEventListener("click",function(){
         markAsDone(this.id)
     });
+    button.textContent="✅";
     let doneItem=document.getElementById("task-"+id);
     doneItem.classList.remove("completed-task");
     doneItem.classList.add("todo-task");

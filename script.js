@@ -1,7 +1,15 @@
 taskCount=0;
 function addTask(){
-    const inputTasc=document.getElementById("task").value;
-    createTask(inputTasc);
+    const input=document.getElementById("task");
+    const inputTask=input.value;
+    if(inputTask=="")
+    {
+        alert("Enter some info");
+        return;
+    }
+    createTask(inputTask);
+    input.value="";
+    
 }
 
 function createTask(inputTasc){
@@ -13,7 +21,7 @@ function createTask(inputTasc){
     newItem.classList.add("todo-task");
     doneButton.textContent="✅";
     doneButton.classList.add("done-button");
-    doneButton.addEventListener("click",function(){markAsDone(this.id)});
+    doneButton.addEventListener("click",function(){deleteItem(this.id)});
     newItem.addEventListener("click",function(){markAsDone(this.id)});
     newItem.id="task-"+taskCount;
     doneButton.id=taskCount;
@@ -40,5 +48,6 @@ function markAsNotDone(id){
  }
 
  function deleteItem(id){
-    document,getElementById(id).remove();
+    alert(id);
+    document.getElementById(id).parentElement.remove();
  }

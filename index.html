@@ -3,17 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product Table</title>
+    <title>TO DO LIST</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="container">
     <div class="header">
         <h1>TO DO LIST</h1>
-    </div>
+    </div>     
     <div class="input-task">
       <label for="task">ENTER TASK</label>
       <input name="task" type="text" id="task" />
+      <button type="submit" onclick="addTask() ">Submit</button>
+    </div>
+    <div class="pending-tasks">
+        <h3>TASKS</h3>
+        <ul id="tasks-list">
+        <li><div class="todo-task">to do task</div></li>
+        <li><div class="completed-task">completed task</div></li>
+        </ul>
     </div>
     </div>
     <script src="script.js"></script>

@@ -22,7 +22,26 @@ html,body{
     color: aliceblue;
 }
 .input-task{
+    border: 2px solid black;
     margin-top: 20px;
     margin:15px auto;
     text-align: center;
+    display: inline-block;
+    padding: 15px;
+}
+.pending-tasks{
+    border: 2px solid black;
+}
+.tasks-list{
+    list-style-type: disc;
+}
+li{
+    display: list-item;
+}
+.todo-task{
+    color: green;
+}
+.completed-task{
+    opacity: 50%;
+    text-decoration: line-through;
 }

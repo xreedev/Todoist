@@ -1,30 +1,28 @@
 taskCount=0;
 function addTask(){
-    const input=document.getElementById("input-task-name");
-    const inputTask=input.value;
+    const inputBox=document.getElementById("input-task-name");
+    const inputTask=inputBox.value;
     if(inputTask.trim()=="")
     {
         alert("Enter some info");
         return;
     }
     createTask(inputTask);
-    input.value="";
+    inputBox.value="";
     
 }
 
-function createTask(inputTasc){
+function createTask(inputTask){
     taskCount+=1;
     let taskList=document.getElementById("tasks-list");
     let newItem=document.createElement("li")
     let doneButton=document.createElement("button");
-    newItem.textContent=inputTasc;
+    newItem.textContent=inputTask;
     newItem.classList.add("todo-task");
     doneButton.textContent="✅";
     doneButton.classList.add("done-button");
     doneButton.onclick=function(){deleteItem(this.id)};
     newItem.onclick=function(){markAsDone(this.id)};
-    //doneButton.addEventListener("click",function(){deleteItem(this.id)});
-    //newItem.addEventListener("click",function(){markAsDone(this.id)});
     newItem.id="task-"+taskCount;
     doneButton.id=taskCount;
     newItem.appendChild(doneButton);

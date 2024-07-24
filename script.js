@@ -1,8 +1,8 @@
 taskCount=0;
 function addTask(){
-    const input=document.getElementById("input-task-name");
-    const inputTask=input.value;
-    if(inputTask.trim()=="")
+    const inputTask=document.getElementById("input-task-name");
+    const inputTaskValue=input.value;
+    if(inputTaskValue.trim()=="")
     {
         alert("Enter some info");
         return;
@@ -23,8 +23,6 @@ function createTask(inputTasc){
     doneButton.classList.add("done-button");
     doneButton.onclick=function(){deleteItem(this.id)};
     newItem.onclick=function(){markAsDone(this.id)};
-    //doneButton.addEventListener("click",function(){deleteItem(this.id)});
-    //newItem.addEventListener("click",function(){markAsDone(this.id)});
     newItem.id="task-"+taskCount;
     doneButton.id=taskCount;
     newItem.appendChild(doneButton);

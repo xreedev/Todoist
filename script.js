@@ -1,7 +1,7 @@
 taskCount=0;
 function addTask(){
     const inputTask=document.getElementById("input-task-name");
-    const inputTaskValue=input.value;
+    const inputTaskValue=inputTask.value;
     if(inputTaskValue.trim()=="")
     {
         alert("Enter some info");

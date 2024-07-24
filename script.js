@@ -8,7 +8,7 @@ function addTask(){
         return;
     }
     createTask(inputTask);
-    input.value="";
+    inputTask.value="";
     
 }
 

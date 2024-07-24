@@ -1,14 +1,14 @@
 taskCount=0;
 function addTask(){
-    const inputTask=document.getElementById("input-task-name");
-    const inputTaskValue=inputTask.value;
-    if(inputTaskValue.trim()=="")
+    const input=document.getElementById("input-task-name");
+    const inputTask=input.value;
+    if(inputTask.trim()=="")
     {
         alert("Enter some info");
         return;
     }
     createTask(inputTask);
-    inputTask.value="";
+    input.value="";
     
 }
 
@@ -23,6 +23,8 @@ function createTask(inputTasc){
     doneButton.classList.add("done-button");
     doneButton.onclick=function(){deleteItem(this.id)};
     newItem.onclick=function(){markAsDone(this.id)};
+    //doneButton.addEventListener("click",function(){deleteItem(this.id)});
+    //newItem.addEventListener("click",function(){markAsDone(this.id)});
     newItem.id="task-"+taskCount;
     doneButton.id=taskCount;
     newItem.appendChild(doneButton);
